@@ -1,0 +1,9 @@
+version: '3.8'  # 使用 docker-compose 文件版本 3.8
+
+services:
+  chatgpt-app:
+    image: pawanosman/chatgpt:latest  # 使用的 Docker 映像
+    container_name: pawanosman-free-chatgpt # 運行時容器名稱
+    ports:
+      - "3040:3040"  # 映射宿主機的3040端口到容器的3040端口
+    restart: unless-stopped  # 容器退出時重啟策略
